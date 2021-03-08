@@ -42,6 +42,12 @@ li{
     color: #DEDEDE;
 }
 
+a{
+    color: #000000;
+    text-decoration: none;
+    display: block;
+}
+
 /*grid container*/
 .container{
     margin: 5%;
@@ -61,6 +67,7 @@ li{
 }
 
 .card{
+    display: block;
     background: #FFFFFF;
     border: 1px solid #E1E2E3;
     box-sizing: border-box;
@@ -68,10 +75,15 @@ li{
     border-radius: 3px;
     width: 270px;
     margin: 12px;
+    transition: box-shadow .3s;
+}
 
+.card:hover{
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.254693);
 }
 
 .image{
+    display: block;
     width: 268px;
     height: 156px;
     border-bottom: 3px solid #F55423;
@@ -83,7 +95,7 @@ li{
 }
 
 .content{
-    margin: 21px 29px 25px 27px;
+    padding: 21px 29px 25px 27px;
 }
 
 h3.date{
