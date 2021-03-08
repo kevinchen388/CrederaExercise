@@ -1,3 +1,4 @@
+// Fetches content from content.js and updates content of all cards
 function changeContent() {
 
     for (i = 0; i < json_data["cards"].length; i++) {
@@ -12,7 +13,8 @@ function changeContent() {
         var date = document.getElementById("date".concat(i));
         var currentdate = new Date(card["date_published"]);
         var splitted = currentdate.toDateString().split(" ");
-        formatted_date = splitted[1].concat(" ").concat(splitted[2]).concat(",").concat(splitted[3])
+        fullMonth = displayMonth(splitted[1])
+        formatted_date = fullMonth.concat(" ").concat(splitted[2]).concat(",").concat(splitted[3])
         date.innerHTML = formatted_date;
 
         // Title
@@ -29,4 +31,45 @@ function changeContent() {
 
     }
 }
+
+// Transform month shorthand to full name (ex. Jan -> January)
+function displayMonth(input) {
+    if (input == 'Jan'){
+        return "January"
+    }
+    else if (input == 'Feb'){
+        return "February"
+    }
+    else if (input == 'Feb'){
+        return "February"
+    }
+    else if (input == 'Mar'){
+        return "March"
+    }
+    else if (input == 'Apr'){
+        return "April"
+    }
+    else if (input == 'Jun'){
+        return "June"
+    }
+    else if (input == 'Jul'){
+        return "July"
+    }
+    else if (input == 'Aug'){
+        return "August"
+    }
+    else if (input == 'Sep'){
+        return "September"
+    }
+    else if (input == 'Oct'){
+        return "October"
+    }
+    else if (input == 'Nov'){
+        return "November"
+    }
+    else {
+        return "December"
+    }
+}
+
 window.onload = changeContent ;
