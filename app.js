@@ -1,20 +1,19 @@
 // Fetches content from content.js and updates content of all cards
 function changeContent() {
-
     for (i = 0; i < json_data["cards"].length; i++) {
-        card = json_data["cards"][i]
+        card = json_data["cards"][i];
 
         // Image
         var image = document.getElementById("image".concat(i));
-        new_image_url = "url(\"".concat(card["image_url"]).concat("\")")
+        new_image_url = "url(\"".concat(card["image_url"]).concat("\")");
         image.style.backgroundImage = new_image_url;
 
         // Date
         var date = document.getElementById("date".concat(i));
         var currentdate = new Date(card["date_published"]);
         var splitted = currentdate.toDateString().split(" ");
-        fullMonth = displayMonth(splitted[1])
-        formatted_date = fullMonth.concat(" ").concat(splitted[2]).concat(",").concat(splitted[3])
+        fullMonth = displayMonth(splitted[1]);
+        formatted_date = fullMonth.concat(" ").concat(splitted[2]).concat(",").concat(splitted[3]);
         date.innerHTML = formatted_date;
 
         // Title
@@ -35,41 +34,41 @@ function changeContent() {
 // Transform month shorthand to full name (ex. Jan -> January)
 function displayMonth(input) {
     if (input == 'Jan'){
-        return "January"
+        return "January";
     }
     else if (input == 'Feb'){
-        return "February"
+        return "February";
     }
     else if (input == 'Feb'){
-        return "February"
+        return "February";
     }
     else if (input == 'Mar'){
-        return "March"
+        return "March";
     }
     else if (input == 'Apr'){
-        return "April"
+        return "April";
     }
     else if (input == 'Jun'){
-        return "June"
+        return "June";
     }
     else if (input == 'Jul'){
-        return "July"
+        return "July";
     }
     else if (input == 'Aug'){
-        return "August"
+        return "August";
     }
     else if (input == 'Sep'){
-        return "September"
+        return "September";
     }
     else if (input == 'Oct'){
-        return "October"
+        return "October";
     }
     else if (input == 'Nov'){
-        return "November"
+        return "November";
     }
     else {
-        return "December"
+        return "December";
     }
 }
 
-window.onload = changeContent ;
+window.onload = changeContent;
