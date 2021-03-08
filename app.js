@@ -30,15 +30,3 @@ function changeContent() {
     }
 }
 window.onload = changeContent ;
-
-// fetch()
-//  .then(function (response) {
-//    return response.json();
-//  })
-//  .then(function (data) {
-//    console.log(data)
-//    appendData(data);
-//  })
-//  .catch(function (err) {
-//    console.log(err);
-//  });
