@@ -1,6 +1,25 @@
-console.log(json_data)
+function changeContent () {
+    //console.log(json_data)
+    //console.log(json_data["cards"][0])
+
+    for (i = 0; i < json_data["cards"].length; i++) {
+        //console.log(json_data["cards"][i])
+        card = json_data["cards"][i]
+
+        var image = document.getElementById("image".concat(i));
+        var date = document.getElementById("date".concat(i));
+        var title = document.getElementById("title".concat(i));
+        var description = document.getElementById("description".concat(i));
+        new_image_url = "url(\"".concat(card["image_url"]).concat("\")")
+        image.style.backgroundImage = new_image_url;
+        date.innerHTML = card["date_published"];
+        title.innerHTML = card["title"];
+        description.innerHTML = card["description"];
 
 
+    }
+}
+window.onload = changeContent ;
 
 // fetch('../Credera/content.json')
 //  .then(function (response) {

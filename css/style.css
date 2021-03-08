@@ -79,7 +79,7 @@ li{
     background-image: url(../images/quantum_computer-shutterstock2.jpg);
     background-size: cover;
     background-position: center;
-    
+    border-radius: 3px 3px 0px 0px;
 }
 
 .content{
